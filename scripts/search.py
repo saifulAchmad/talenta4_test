@@ -5,6 +5,8 @@ from tabulate import tabulate  # Tambahkan import ini
 from dotenv import load_dotenv
 import os
 
+load_dotenv()
+
 # Azure Search credentials and endpoint
 service_name = "content-search"
 api_key = os.getenv('search_api_key')

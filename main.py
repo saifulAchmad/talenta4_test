@@ -13,7 +13,6 @@ if columns_to_remove:
 st.title("Cari Supplier1")
 
 
-
 st.sidebar.title("Pilih Lokasi")
 
 with st.sidebar:
