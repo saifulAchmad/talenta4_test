@@ -9,7 +9,7 @@ load_dotenv()
 
 # Azure Search credentials and endpoint
 service_name = "content-search"
-api_key = os.getenv('search_api_key')
+api_key = str(os.getenv('search_api_key'))
 index_name = "suppliers"
 endpoint = f"https://{service_name}.search.windows.net"
 
@@ -41,7 +41,8 @@ def get_supplier(search_text, provinsi=[], kota=[], kecamatan=[]):
     
     filter_str = " and ".join(filters)
     print(f'filter_str: {filter_str}')
-    
+    # print("api key = "api_key)
+    # print(type(api_key))
     # Perform search
     results = search_client.search(search_text=search_text, filter=filter_str)
     

@@ -9,7 +9,7 @@ load_dotenv()
 # 
 # Azure Search credentials and endpoint
 service_name = "content-search"
-api_key = os.getenv('search_api_key')
+api_key = str(os.getenv('search_api_key'))
 index_name = "suppliers"
 endpoint = f"https://{service_name}.search.windows.net"
 
