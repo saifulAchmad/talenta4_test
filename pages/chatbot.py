@@ -14,7 +14,6 @@ openai_api_key = str(os.getenv('open_api_key'))
 with st.sidebar:
     openai.api_key = openai_api_key
 
-
 if openai_api_key=="":
     st. write("null")
 else :
