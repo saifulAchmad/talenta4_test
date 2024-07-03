@@ -69,8 +69,6 @@ if search_services_:
     df_search = get_supplier(text_services, provinsi=selected_province, kota=selected_cities, kecamatan=selected_districts)
     st.session_state['df_search'] = df_search
 
-
-
 df_search = st.session_state.get('df_search', None)
 if df_search is not None:
     st.dataframe(df_search)
