@@ -66,13 +66,6 @@ if selected_districts:
 text_services = st.text_input('Barang atau Jasa')
 search_services_ = st.button('Search', type='primary')
 if search_services_:
-    st.text(text_services)
-    st.text(selected_province)
-    st.text(selected_cities)
-    st.text(selected_districts)
-    
-    
-
     df_search = get_supplier(text_services, provinsi=selected_province, kota=selected_cities, kecamatan=selected_districts)
     st.session_state['df_search'] = df_search
 
