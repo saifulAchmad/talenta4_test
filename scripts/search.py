@@ -41,8 +41,8 @@ def get_supplier(search_text, provinsi=[], kota=[], kecamatan=[]):
     
     filter_str = " and ".join(filters)
     print(f'filter_str: {filter_str}')
-    # print("api key = "api_key)
-    # print(type(api_key))
+    openai_api_key = str(os.getenv('open_api_key'))
+
     # Perform search
     results = search_client.search(search_text=search_text, filter=filter_str)
     

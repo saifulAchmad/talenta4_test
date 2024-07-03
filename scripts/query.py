@@ -17,7 +17,6 @@ endpoint = f"https://{service_name}.search.windows.net"
 credential = AzureKeyCredential(api_key)
 search_client = SearchClient(endpoint=endpoint, index_name=index_name, credential=credential)
 
-# Function to query Azure Search
 def search_umkm(search_text, provinsi=None, kota=None, kecamatan=None):
     # Build filter string
     filters = []
