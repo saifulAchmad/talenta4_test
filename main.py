@@ -70,6 +70,7 @@ if search_services_:
     st.session_state['df_search'] = df_search
 
 
+
 df_search = st.session_state.get('df_search', None)
 if df_search is not None:
     st.dataframe(df_search)
