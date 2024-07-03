@@ -65,6 +65,7 @@ if search_services_:
     st.text(selected_province)
     st.text(selected_cities)
     st.text(selected_districts)
+    
     df_search = get_supplier(text_services, provinsi=selected_province, kota=selected_cities, kecamatan=selected_districts)
     st.session_state['df_search'] = df_search
 
