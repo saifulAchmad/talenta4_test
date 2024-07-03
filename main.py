@@ -3,6 +3,12 @@ import pandas as pd
 
 from scripts.search import get_supplier
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+
 
 df_lokasi = pd.read_csv("umkm.csv")
 df_lokasi = df_lokasi[['provinsi', 'kota' , 'kecamatan']].drop_duplicates()
@@ -11,7 +17,6 @@ columns_to_remove = [col for col in df_lokasi.columns if col == '']
 if columns_to_remove:
     df_lokasi = df_lokasi.drop(columns=columns_to_remove)
 st.title("Cari Supplier")
-
 
 st.sidebar.title("Pilih Lokasi")
 
@@ -66,6 +71,8 @@ if search_services_:
     st.text(selected_cities)
     st.text(selected_districts)
     
+    
+
     df_search = get_supplier(text_services, provinsi=selected_province, kota=selected_cities, kecamatan=selected_districts)
     st.session_state['df_search'] = df_search
 

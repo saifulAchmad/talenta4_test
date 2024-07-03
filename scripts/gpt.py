@@ -9,6 +9,7 @@ import os
 load_dotenv()
 
 
+
 openai_api_key = str(os.getenv('open_api_key'))
 openai.api_key = openai_api_key
 
@@ -54,6 +55,7 @@ tools = [
 
     # Add other tools
 ]
+
 
 
 def answer(history, use_tool=True):
